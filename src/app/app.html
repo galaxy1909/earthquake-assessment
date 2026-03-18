@@ -1,0 +1,8 @@
+<!-- app.component.html -->
+<div *ngIf="loading">Loading data...</div>
+
+<div class="container" >
+  <app-chart-panel [data]="earthquakes"></app-chart-panel>
+  <app-data-table [data]="earthquakes"></app-data-table>
+</div>
+

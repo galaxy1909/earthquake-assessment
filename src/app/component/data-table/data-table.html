@@ -1,0 +1,21 @@
+<table>
+
+  <!-- Header -->
+  <tr>
+    <th *ngFor="let key of keys">
+      {{ key }}
+    </th>
+  </tr>
+
+  <!-- Rows -->
+  <tr *ngFor="let row of data"
+      (click)="selectRow(row)"
+      [class.active]="row === selectedRow">
+
+    <td *ngFor="let key of keys">
+      {{ row[key] }}
+    </td>
+
+  </tr>
+
+</table>
